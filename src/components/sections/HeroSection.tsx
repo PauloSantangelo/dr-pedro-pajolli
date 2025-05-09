@@ -9,12 +9,12 @@ export default function HeroSection() {
   return (
     <section
       id="inicio"
-      className="relative w-full min-h-[82vh] bg-[#021C2C] text-white px-6 py-16 overflow-hidden"
+      className="relative w-full min-h-screen lg:min-h-[82vh] bg-[#021C2C] text-white px-6 py-16 overflow-hidden"
     >
       <div className="relative z-10 max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10">
-        {/* Texto à esquerda com animação */}
+        {/* Texto à esquerda */}
         <motion.div
-          className="flex-1 space-y-6"
+          className="flex-1 space-y-6 text-center lg:text-left"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -25,7 +25,7 @@ export default function HeroSection() {
             e Confiança
           </h1>
 
-          <div className="text-sm md:text-base font-[var(--font-body)] font-extralight max-w-xl text-justify space-y-4 leading-relaxed">
+          <div className="text-sm md:text-base font-[var(--font-body)] font-extralight max-w-xl mx-auto lg:mx-0 text-justify space-y-4 leading-relaxed">
             <p>
               Com ampla experiência em Urologia e Cirurgia Robótica, o Dr. Pedro Pajolli atua no diagnóstico e tratamento de doenças da próstata, cálculos renais, disfunção erétil e saúde íntima masculina.
             </p>
@@ -34,24 +34,32 @@ export default function HeroSection() {
             </p>
           </div>
 
-          <a
-            href="#agendar"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded bg-[#d9a84e] text-black font-[var(--font-body)] font-medium text-sm shadow hover:bg-[#c99942] transition mt-2"
-          >
-            <LuCalendarClock size={20} />
-            AGENDAR CONSULTA
-          </a>
+          <div className="flex justify-center lg:justify-start">
+            <a
+              href="#agendar"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded bg-[#d9a84e] text-black font-[var(--font-body)] font-medium text-sm shadow hover:bg-[#c99942] transition mt-2"
+            >
+              <LuCalendarClock size={20} />
+              AGENDAR CONSULTA
+            </a>
+          </div>
         </motion.div>
 
-        {/* Imagem com animação e moldura ajustada */}
+        {/* Imagem do Dr. com fundo dinâmico */}
         <motion.div
-          className="relative flex-1 flex items-end justify-center h-[720px]"
+          className="relative flex-1 flex items-end justify-center h-[480px] md:h-[600px] lg:h-[720px]"
           initial={{ opacity: 0, y: 60 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.2 }}
         >
-          <div className="absolute bottom-0 w-[410px] h-[450px] bg-[#d1a144] rounded-t-[180px] z-0" />
-          <div className="relative w-[460px] h-[700px] z-10">
+          {/* Círculo de fundo para mobile */}
+          <div className="absolute bottom-0 w-[260px] h-[260px] bg-[#d1a144] rounded-full z-0 lg:hidden" />
+
+          {/* Moldura tradicional apenas no desktop */}
+          <div className="hidden lg:block absolute bottom-0 w-[410px] h-[450px] bg-[#d1a144] rounded-t-[180px] z-0" />
+
+          {/* Foto do Dr. Pedro */}
+          <div className="relative w-[260px] h-[420px] md:w-[380px] md:h-[600px] lg:w-[460px] lg:h-[700px] z-10">
             <Image
               src="/imagens/drpedro1.webp"
               alt="Dr. Pedro Pajolli"
@@ -62,7 +70,7 @@ export default function HeroSection() {
           </div>
         </motion.div>
 
-        {/* Texto à direita com citação */}
+        {/* Citação visível apenas no desktop */}
         <motion.div
           className="hidden lg:flex flex-1 items-center justify-end"
           initial={{ opacity: 0, x: 50 }}
