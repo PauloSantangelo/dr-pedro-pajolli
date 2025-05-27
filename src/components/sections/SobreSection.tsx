@@ -19,8 +19,7 @@ export default function SobreSection() {
 
   return (
     <section id="sobre" className="relative bg-white text-[#021C2C] py-24 px-6 md:px-0 overflow-hidden">
-      {/* Imagem de fundo com opacidade */}
-      <div className="absolute inset-0 z-0 opacity-10">
+      <div className="absolute inset-0 z-0 opacity-5">
         <Image
           src="/imagens/rins.png"
           alt="Fundo Rins"
@@ -30,7 +29,6 @@ export default function SobreSection() {
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
-        {/* Imagem estilo stories */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -48,7 +46,6 @@ export default function SobreSection() {
           </div>
         </motion.div>
 
-        {/* Texto e botão */}
         <motion.div
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -60,23 +57,19 @@ export default function SobreSection() {
           </h2>
 
           <p className="text-sm font-[var(--font-body)] font-extralight leading-relaxed text-justify">
-            Dr. Pedro Ivo Pajolli é um renomado médico urologista formado pela Universidade Estadual Paulista Júlio de Mesquita Filho (UNESP) em 2011.
+            Médico urologista formado em 2011 pela Universidade Estadual Paulista Júlio de Mesquita Filho (UNESP), com especialização em Cirurgia e Urologia pela mesma instituição.
           </p>
 
           <p className="text-sm font-[var(--font-body)] font-extralight leading-relaxed text-justify">
-            Pajolli possui especialização em Cirurgia e Urologia pela mesma instituição e realizou um Observer Fellowship na Johns Hopkins School of Medicine/Brady Urological Institute.
+            Realizou um Observer Fellowship na Johns Hopkins School of Medicine/Brady Urological Institute em 2016, com ênfase em cirurgia robótica, e possui certificação internacional em Endourologia, Laparoscopia e Cirurgia Minimamente Invasiva pela Endourological Society.
           </p>
 
           <p className="text-sm font-[var(--font-body)] font-extralight leading-relaxed text-justify">
-            Dr. Pajolli é certificado pela Endourological Society em Endourologia, Laparoscopia e Cirurgia Minimamente Invasiva. Atualmente, atua como urologista na Unimed Bauru, no Hospital Estadual e no Hospital de Base de Bauru, e é membro titular da Sociedade Brasileira de Urologia.
+            Doutor em Cirurgia e Medicina Translacional pela UNESP, atua como urologista na Unimed Bauru, no Hospital Estadual e no Hospital de Base de Bauru. É também membro titular da Sociedade Brasileira de Urologia.
           </p>
 
           <p className="text-sm font-[var(--font-body)] font-extralight leading-relaxed text-justify">
-            Além de possuir doutorado em Cirurgia e Medicina Translacional pela UNESP, com enfoque em técnicas modernas e minimamente invasivas para o diagnóstico e tratamento de condições urológicas.
-          </p>
-
-          <p className="text-sm font-[var(--font-body)] font-extralight leading-relaxed text-justify">
-            Seu compromisso vai além da técnica: ele acredita em um atendimento humano, respeitoso e personalizado, que valoriza a individualidade de cada paciente.
+            Seu compromisso vai além da técnica: acredita em um atendimento humano, respeitoso e personalizado, que valoriza a individualidade de cada paciente.
           </p>
 
           <a
