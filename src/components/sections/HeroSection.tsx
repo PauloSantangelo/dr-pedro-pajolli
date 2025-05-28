@@ -36,7 +36,7 @@ export default function HeroSection() {
 
           <div className="flex justify-center lg:justify-start">
             <a
-              href="#agendar"
+              href="https://wa.me/5514999053626"
               className="inline-flex items-center gap-2 px-6 py-3 rounded bg-[#d9a84e] text-black font-[var(--font-body)] font-medium text-sm shadow hover:bg-[#c99942] transition mt-2"
             >
               <LuCalendarClock size={20} />
