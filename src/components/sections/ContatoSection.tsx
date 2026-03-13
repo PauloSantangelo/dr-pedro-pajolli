@@ -18,19 +18,31 @@ export default function ContatoSection() {
               <h3 className="text-xl font-semibold font-[var(--font-title)] mb-4 text-center min-h-[3rem]">
                 Unimed Bauru
               </h3>
+
               <div className="flex items-start gap-3 mb-2">
-                <LuMapPin size={20} className="text-[#d1a144] mt-1" />
+                <LuMapPin size={20} className="text-[#d1a144] mt-1 shrink-0" />
                 <p className="text-sm font-[var(--font-body)] font-extralight">
                   Rua Rio Branco 65, Bauru - SP
                 </p>
               </div>
+
               <div className="flex items-start gap-3">
-                <LuPhone size={20} className="text-[#d1a144] mt-1" />
+                <LuPhone size={20} className="text-[#d1a144] mt-1 shrink-0" />
                 <p className="text-sm font-[var(--font-body)] font-extralight">
                   (14) 3235-3322 | (14) 3235-3350
                 </p>
               </div>
+
+              <a
+                href="https://wa.me/5514999999999?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex w-full items-center justify-center rounded-md border border-[#d1a144] bg-[#d1a144] px-5 py-3 text-sm font-medium text-[#0d2736] transition hover:opacity-90"
+              >
+                Agendar consulta
+              </a>
             </div>
+
             <div className="mt-6">
               <Image
                 src="/imagens/unimed.jpg"
@@ -48,19 +60,31 @@ export default function ContatoSection() {
               <h3 className="text-xl font-semibold font-[var(--font-title)] mb-4 text-center min-h-[3rem]">
                 CMC - Clínica Médica
               </h3>
+
               <div className="flex items-start gap-3 mb-2">
-                <LuMapPin size={20} className="text-[#d1a144] mt-1" />
+                <LuMapPin size={20} className="text-[#d1a144] mt-1 shrink-0" />
                 <p className="text-sm font-[var(--font-body)] font-extralight">
                   R. Gustavo Maciel, 21-21 - Jardim Estoril, Bauru - SP, 17012-110
                 </p>
               </div>
+
               <div className="flex items-start gap-3">
-                <LuPhone size={20} className="text-[#d1a144] mt-1" />
+                <LuPhone size={20} className="text-[#d1a144] mt-1 shrink-0" />
                 <p className="text-sm font-[var(--font-body)] font-extralight">
-                  (14) 3234-1959 
+                  (14) 3234-1959
                 </p>
               </div>
+
+              <a
+                href="https://wa.me/5514999999999?text=Olá,%20gostaria%20de%20agendar%20uma%20consulta."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex w-full items-center justify-center rounded-md border border-[#d1a144] bg-[#d1a144] px-5 py-3 text-sm font-medium text-[#0d2736] transition hover:opacity-90"
+              >
+                Agendar consulta
+              </a>
             </div>
+
             <div className="mt-6">
               <Image
                 src="/imagens/uro.webp"

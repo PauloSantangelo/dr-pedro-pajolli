@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins, DM_Serif_Display } from "next/font/google";
-import Script from "next/script"; // ✅ Import necessário para o GA
+import Script from "next/script";
 import "./globals.css";
 import Header from "../components/Header";
 
@@ -37,17 +37,18 @@ export default function RootLayout({
       className={`${poppins.variable} ${dmSerif.variable}`}
     >
       <head>
-        {/* ✅ Tag do Google Analytics */}
         <Script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-M0L98LVHVG"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-tags" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
+
             gtag('config', 'G-M0L98LVHVG');
+            gtag('config', 'AW-11555664340');
           `}
         </Script>
       </head>
